@@ -7,7 +7,7 @@ const FeaturesCard = ({ tag, title, description, icon }) => {
       <span className="tag">{tag}</span>
       <h3>{title}</h3>
       <p className="desc">{description}</p>
-      <Button>Explore</Button>
+      <Button onClick={() => window.location.href ="#Demo"}>Explore</Button>
     </article>
   );
 };

@@ -2,9 +2,12 @@
 
 A modern, responsive SaaS landing page built with React and custom CSS.
 The project presents a polished product experience through a hero
-section, feature highlights, an interactive-style demo, workflow steps,
-testimonials, pricing plans, FAQs, and calls to action.
+section, feature highlights, an interactive-style demo, workflow steps, testimonials, 
+pricing plans, FAQs, and calls to action.
 
+## Live Demo
+
+Visit the live TaskFlow landing page: `https://task-flow-saa-s-landing-page.vercel.app/`
 
 ## Overview
 
@@ -31,24 +34,20 @@ The main application renders the page sections in this order:
 ## Features
 
 -   **Responsive navigation** — Provides a structured navigation experience with mobile-friendly styling.
--   **Modern Hero Section** — Introduces the product with a clear headline, supporting content, and calls to action.
+-   **Hero Section** — Introduces TaskFlow with a headline, supporting content, and calls to action.
     preview.
--   **Trusted companies section** — Displays social proof through company names or brand references.
--   **Feature Highlights** — Presents the product's key capabilities using reusable card layouts.
--   **Interactive Demo section** — Showcases a sample AI-style interface and product workflow.
--   **How it works section** — Explains the product experience through a step-by-step layout.
--   **Testimonials** — Displays customer feedback in a structured card design.
--   **Pricing section** — Organizes subscription options and plan features.
--   **FAQ section** — Provides space for answers to common customer questions.
+-   **Trusted companies section** — Displays company names or brand references as social proof.
+-   **Feature Highlights** — Presents product capabilities using reusable card layouts.
+-   **Interactive Demo section** — Showcases a sample product interface visually. It does not connect to a live AI service.
+-   **How it works section** — Explains the product workflow through a sequence of steps.
+-   **Testimonials** — Presents sample customer testimonials in a structured layout.
+-   **Pricing section** — Displays subscription tiers and their features.
+-   **FAQ section** — Organizes frequently asked questions into an interactive accordion.
 -   **Call to Action (CTA) section** — Encourages visitors to take the next step.
--   **Structured Footer** — Provides additional navigation and supporting information.
--   **Centralized CSS design system** — for colors, spacing, and transitions.
--   **Responsive layouts**  — Uses CSS Grid, Flexbox, and media queries to adapt the interface to smaller screens.
--   **Reusable React components** — organized by page section.
+-   **Responsive layouts**  — Uses CSS layouts and media queries to adapt the interface to different screen sizes.
+-   **Reusable React components** — Organizes the page into modular, maintainable sections.
 
-The demo's visual presentation should not be interpreted as proof of a
-live AI integration; no API connection is established by the supplied
-code.
+The demo's visual presentation should not be interpreted as proof of a live AI integration; no API connection is established by the supplied code.
 
 ## Tech Stack
 
@@ -73,6 +72,8 @@ TaskFlow-SaaS-app/
     │   │   ├── faq.jsx
     │   │   └── faqCard.jsx
     │   ├── Features/
+    |   │   ├── features.jsx
+    │   │   └── featuresCard.jsx
     │   ├── Pricing/
     │   │   ├── pricing.jsx
     │   │   └── pricingCard.jsx
@@ -97,13 +98,13 @@ TaskFlow-SaaS-app/
     │   ├── global.css
     │   └── MyFramework.css
     ├── App.css
-    ├── App.js
+    ├── App.jsx
     └── index.js
 ```
 
 ### Architecture notes
 
--   `App.js` composes the main page by importing and rendering each
+-   `App.jsx` composes the main page by importing and rendering each
     section component.
 -   `index.js` mounts the React application and imports the global
     stylesheets.
@@ -114,30 +115,24 @@ TaskFlow-SaaS-app/
 -   `App.css` contains page and section styling, including CSS custom
     properties.
 
-The supplied screenshot shows `data/` inside `src/`. The supplied
-`App.js` snippet uses imports such as `./components/Features/features`
-and `./components/testimonials/testimonials`; check capitalization and
-file paths if you reorganize the folders, especially when deploying to a
-case-sensitive environment.
-
 ## Getting Started
 
 ### Prerequisites
 
-Install:
+Make sure you have installed:
 
 -   [Node.js](https://nodejs.org/)
 -   npm (included with Node.js)
 
 ### Installation
 
-1.  Clone or download this repository.
+1.  Clone the repository.
 
     ``` bash
     git clone https://github.com/A-Kandeel/TaskFlow-SaaS-Landing-Page
     ```
 
-2.  Change into the project directory.
+2.  Navigate into the cloned repository.
 
     ``` bash
     cd TaskFlow-SaaS-app
@@ -157,9 +152,6 @@ Install:
 
 5.  Open <http://localhost:3000> in your browser.
 
-The clone URL is a placeholder; replace it with the URL of your actual
-repository.
-
 ## Available Scripts
 
   -----------------------------------------------------------------------
@@ -167,14 +159,8 @@ repository.
   ----------------------------------- -----------------------------------
   `npm start`                         Runs the app in development mode.
 
-  `npm test`                          Runs the configured test suite.
-
   `npm run build`                     Creates an optimized production
                                       build in `build/`.
-
-  `npm run eject`                     Exposes the underlying Create React
-                                      App configuration. This is a
-                                      one-way operation.
   -----------------------------------------------------------------------
 
 These scripts are the standard scripts described by the supplied Create
@@ -198,30 +184,27 @@ The supplied variables include:
   `--main-transition`   Shared transition duration      `0.3s`
   `--letter-space`      Shared letter spacing           `1.35px`
 
-These variables are shown in the supplied CSS excerpt. Update the
-relevant stylesheet in the project to change the palette or spacing
-consistently.
+The design system uses CSS custom properties to keep colors, spacing, borders, 
+and transitions consistent across the landing page. Update these variables in the stylesheet where :root is defined to customize the design.
 
 ## Customization
 ### You can customize the project by modifying the following areas:
 
--   **Page content:** Update the text, labels, testimonials, and pricing information inside the relevant components.
--   **Features:** Update `src/data/features.js` and the Features
-    component.
--   **Pricing:** Update `src/data/pricing.js` and the Pricing
-    components.
+-   **Page content:** Edit the text, labels, and section content in the relevant components.
+-   **Features:**  Update `src/data/features.js` and the Features component.
+-   **Pricing:** Update `src/data/pricing.js` and the Pricing components.
 -   **FAQs:** Update `src/data/faq.js` and the FAQ components.
 -   **Testimonials:** Update `src/data/testimonial.js` and the
     testimonials components.
--   **Colors and spacing:** Adjust the CSS custom properties in the
-    stylesheet where `:root` is defined.
--   **Page order:** Add, remove, or reorder components in `App.js`.
--   **Navigation and calls to action:** Update the links and button
-    behavior in their corresponding components.
+-   **Colors and spacing:** Modify the CSS custom properties in the stylesheet where `:root` 
+    is defined.
+-   **Page layout:** Add, remove, or reorder components in `App.jsx`.
+-   **Navigation and calls to action:** Update the relevant components to change labels, 
+    links, and interactions.
 
 ## Production Build
 
-Create a production build with:
+To create a production build, run:
 
 ``` bash
 npm run build
@@ -231,19 +214,17 @@ Create React App outputs the optimized build to the `build/` directory.
 Deploy that directory using a static hosting service compatible with
 React single-page applications.
 
-## Possible Next Steps
+## Future Improvements
 
-Depending on the intended product scope, future improvements could
-include:
+Potential future enhancements include:
 
--   Connecting the demo to a real API if live generation is required.
+-   Connecting the demo to a real AI API.
 -   Adding authentication and account management.
--   Connecting pricing plans to a subscription or payment provider.
--   Adding automated tests for key components and interactions.
--   Reviewing keyboard navigation, semantic HTML, and accessible labels.
+-   Integrating a payment provider for subscription plans.
+-   Adding automated tests.
+-   Improving keyboard accessibility and form validation.
 
-These are potential enhancements, not claims about features currently
-implemented.
+These features are ideas for future development and are not currently implemented.
 
 ## Contributing
 
@@ -257,9 +238,7 @@ If you plan to accept contributions:
 
 ## License
 
-No license information was included in the supplied project details. Add
-a `LICENSE` file and update this section before distributing the project
-publicly.
+No license has been specified for this project.
 
 ------------------------------------------------------------------------
 

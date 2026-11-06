@@ -574,7 +574,7 @@
 }
 .howItworks .col-grid {
   display: grid;
-  gap: 15px;
+  gap: 30px;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
 }
 .howItworks .col-grid .col {
@@ -613,7 +613,7 @@
 .howItworks .col-grid .col p {
   font-size: 14px;
 }
-@media (max-width: 767px) {
+@media (max-width: 992px) {
   .howItworks .col-grid .col::after {
     display: none;
   }
@@ -629,7 +629,7 @@
 .testimonials .testimonials-box {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 16px;
+  gap: 30px;
 }
 .testimonials .testimonials-box .card {
   border: 1px solid var(--line);
@@ -719,7 +719,7 @@
 .pricing .card-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 16px;
+  gap: 30px;
 }
 .pricing .card-container .card {
   position: relative;

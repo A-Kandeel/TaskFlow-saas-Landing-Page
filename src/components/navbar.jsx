@@ -25,8 +25,8 @@ const NavBar = () => {
           ))}
         </ul>
         <div className="btn-box">
-          <a className="login" href="#contact">Log In</a>
-          <Button>Get Started</Button>
+          <a className="login" href="#Contact">Log In</a>
+          <Button onClick={() => window.location.href ="#Demo"}>Get Started</Button>
         </div>
         <button
           className="toggle-menu"

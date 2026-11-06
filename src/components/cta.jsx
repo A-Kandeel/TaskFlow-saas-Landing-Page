@@ -11,7 +11,7 @@ const CTA = () => {
           title="Give the team a better starting point."
           desc="Bring one messy recurring task. Leave with a workflow worth reusing."
         />
-        <Button>Start Free</Button>
+        <Button onClick={() => window.location.href ="#Contact"}>Start Free</Button>
       </div>
     </section>
   );

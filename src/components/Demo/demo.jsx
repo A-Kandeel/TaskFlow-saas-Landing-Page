@@ -10,7 +10,7 @@ const Demo = () => {
   const [mode, setmode] = useState("Confident");
   const [showGenerated, setShowGenerated] = useState(false);
   return (
-    <section className="demo container">
+    <section className="demo container" id="Demo">
       <div className="demo-overlay">
         <div className="text">
           <SecHeader

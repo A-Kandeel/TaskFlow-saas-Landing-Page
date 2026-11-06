@@ -11,7 +11,7 @@ const PricingCard = ({ title, description, price, button, data }) => {
         {price}
         {Number.isInteger(price) && <span className="payment-per"> /month</span>}
       </div>
-      <Button>{button}</Button>
+      <Button onClick={() => window.location.href ="#Contact"}>{button}</Button>
       <ul className="feat-list">
         {data.map((feat) => (
           <li key={feat}><Check/> {feat}</li>

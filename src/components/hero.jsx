@@ -13,9 +13,11 @@ const Hero = () => {
           —so your team spends less time prompting and more time moving.
         </p>
         <div className="btn-box">
-          <Button>Start Building For Free</Button>
+          <Button onClick={() => window.location.href ="#Contact"}>Start Building For Free</Button>
           <span className="play">
-            <span><i className="fas fa-play"></i></span>
+            <span href="#Demo" onClick={() => window.location.href ="#Demo"}>
+              <i className="fas fa-play"></i>
+            </span>
             See how it works
           </span>
         </div>
@@ -84,7 +86,7 @@ const Hero = () => {
               <i className="far fa-clock"></i>
               <span>Generated in 4.2s</span>
             </div>
-            <Button>Try the workflow</Button>
+            <Button onClick={() => window.location.href ="#Demo"}>Try the workflow</Button>
           </div>
         </div>
       </section>
